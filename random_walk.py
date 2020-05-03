@@ -28,16 +28,18 @@ def random_direction(steps_x, steps_y, num):
             steps_x = equal_array(steps_x)
     return steps_x, steps_y
 
-# Inicializa las listas 
-steps_x = [0]
-steps_y = [0]
+if __name__ == "__main__":
+    
+    # Inicializa las listas 
+    steps_x = [0]
+    steps_y = [0]
 
-# Inicio del programa: ingresa la cantidad de steps(pasos) mediante consola
-num = int(input('Numero de steps aleatorios: '))
-random_direction(steps_x, steps_y, num)
+    # Inicio del programa: ingresa la cantidad de steps(pasos) mediante consola
+    num = int(input('Numero de steps aleatorios: '))
+    random_direction(steps_x, steps_y, num)
 
-#plotting
-output_file("drunk_simulator.html")
-plot = figure(plot_width=1000, plot_height=600)
-plot.line(steps_x, steps_y, line_width=2)
-show(plot)
+    #plotting
+    output_file("random_walk.html")
+    plot = figure(plot_width=1000, plot_height=600)
+    plot.line(steps_x, steps_y, line_width=2)
+    show(plot)
